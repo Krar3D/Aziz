@@ -1,0 +1,108 @@
+<!DOCTYPE html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>Living in the USA – العيش في أمريكا</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f3f5f9;--fg:#14213d;--card:#fff;--acc:#1d4ed8;--on:#fff;--red:#c8102e;--mut:#4a5873;--bd:#d6dce8;--hl:#fde68a;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1626;--fg:#e8edf7;--card:#172036;--acc:#8fb0ff;--on:#0f1626;--red:#ff6b81;--mut:#a3b0cb;--bd:#2a3654;--hl:#6b5a10}}
+:root[data-theme="dark"]{--bg:#0f1626;--fg:#e8edf7;--card:#172036;--acc:#8fb0ff;--on:#0f1626;--red:#ff6b81;--mut:#a3b0cb;--bd:#2a3654;--hl:#6b5a10}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.8 Cairo,"Segoe UI",Tahoma,sans-serif}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:10}
+header{text-align:center;padding:26px 16px 14px;border-top:10px solid transparent;border-image:repeating-linear-gradient(135deg,var(--red) 0 14px,var(--bg) 14px 28px,var(--acc) 28px 42px,var(--bg) 42px 56px) 10}
+h1{margin:0;font:700 clamp(28px,7vw,44px)/1.2 Georgia,serif;direction:ltr}
+header p{margin:6px 0 0;color:var(--mut)}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--bg);border-bottom:1px solid var(--bd);padding:10px 12px;display:flex;flex-wrap:wrap;gap:8px;justify-content:center;align-items:center}
+button,select{font:inherit;font-size:15px;color:var(--fg);background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:5px 12px;cursor:pointer}
+button:focus-visible,select:focus-visible,.w:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+.tab.act{background:var(--acc);color:var(--on);border-color:var(--acc)}
+main{max-width:820px;margin:0 auto;padding:6px 14px 40px}
+.hint{color:var(--mut);font-size:14px;text-align:center;margin:12px 0}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:6px 18px 14px;margin:16px 0}
+h2{font-size:21px;margin:14px 0 2px;direction:ltr;text-align:left;font-family:Georgia,serif}
+h2 small{font:14px Cairo,sans-serif;color:var(--mut);margin-inline-start:8px}
+.blk{padding:8px 0;border-top:1px dashed var(--bd);overflow:hidden}
+.en{font:18px/1.8 Georgia,"Times New Roman",serif;margin:2px 0}
+.ar{margin:2px 0;color:var(--mut)}
+.w{cursor:pointer;border-radius:4px}
+.w:hover,.on{background:var(--hl)}
+.pl{float:right;margin-left:10px;padding:2px 8px}
+.all{margin:6px 0}
+.hide .tr{display:none}
+.q{margin:6px 0}
+.n{display:inline-block;background:var(--red);color:var(--card);border-radius:8px;padding:0 9px;margin-top:6px}
+.sh{margin:2px 0 6px}
+.ansbox{border-inline-start:4px solid var(--acc);background:var(--bg);border-radius:8px;padding:2px 12px;margin-bottom:8px}
+.ansbox b{color:var(--acc);direction:ltr;display:inline-block}
+</style></head><body>
+<header><h1>Living in the USA</h1><p>العيش في الولايات المتحدة · Unit 2 – The way we live</p></header>
+<div class="bar">
+<button class="tab act" data-t="txt">📖 النص والترجمة</button><button class="tab" data-t="qa">❓ الأسئلة والأجوبة</button>
+<select id="rate" aria-label="سرعة النطق"><option value="0.6">🐢 بطيء</option><option value="0.85" selected>عادي</option><option value="1.1">سريع</option></select>
+<button id="tr">👁 إخفاء/إظهار الترجمة</button><button id="all">✅ كل الأجوبة</button></div>
+<main><p class="hint">اضغط على أي كلمة إنجليزية لتسمع نطقها 🔊 — أو على السماعة لسماع الجملة كاملة</p>
+<section id="txt"></section><section id="qa" hidden></section></main>
+<script>
+const T=[
+{f:"🌎",n:"Introduction",s:"",ar:"المقدمة",p:[
+["The people of the United States are nearly all immigrants, or descendants of immigrants. It is a young country, and much of the population has relatives who live in other parts of the world.","سكان الولايات المتحدة هم في الغالب مهاجرون أو من أحفاد المهاجرين. إنها دولة فتية، ولدى جزء كبير من سكانها أقارب يعيشون في أنحاء أخرى من العالم."],
+["But how do they find the US when they first arrive? What do they think of the people, the culture, the way of life? Jamie Peterson spoke to three of them.","لكن كيف يجدون أمريكا عند وصولهم أول مرة؟ وما رأيهم بالناس والثقافة وطريقة العيش؟ تحدّث جيمي بيترسون إلى ثلاثة منهم."]]},
+{f:"🇹🇳",n:"Aziz Tounsi",s:"aged 24, from Tunisia",ar:"عزيز تونسي · 24 سنة · من تونس",p:[
+["Aziz came from Tunis to New York ten years ago. He wanted to study English here. At first he missed everything – the sunshine, the food, his family. But now he has a successful business with his three brothers and his wife. They run a sports store in New Brunswick. Aziz’s wife is also Tunisian, and they have two children who go to American schools.","جاء عزيز من تونس العاصمة إلى نيويورك قبل عشر سنوات. أراد أن يدرس اللغة الإنجليزية هنا. في البداية اشتاق إلى كل شيء: الشمس والطعام وعائلته. لكنه الآن يملك عملًا ناجحًا مع إخوته الثلاثة وزوجته. يديرون متجرًا للمستلزمات الرياضية في نيو برونزويك. زوجة عزيز تونسية أيضًا، ولديهما طفلان يذهبان إلى مدارس أمريكية."],
+["When asked about the future, Aziz says without hesitation, “I want to work hard and be successful.” He certainly works hard. He’s at the store all day, then works as a driver in the evening. “I like living here,” he says. “You can be what you want.”","عندما سُئل عن المستقبل، قال عزيز دون تردد: «أريد أن أعمل بجد وأن أكون ناجحًا.» وهو بالتأكيد يعمل بجد؛ فهو في المتجر طوال اليوم ثم يعمل سائقًا في المساء. يقول: «يعجبني العيش هنا. يمكنك أن تكون ما تريد.»"],
+["“When I first came here, I didn’t speak the language, and it was winter. It was so cold! There was snow! Now nearly all my family are here, not only in New York, but also in California, and in Texas. We meet about once a month and have a huge Tunisian family meal! We’re all happy here.”","«عندما جئت إلى هنا أول مرة لم أكن أتكلم اللغة، وكان الوقت شتاءً. كان البرد شديدًا! وكان هناك ثلج! الآن معظم عائلتي هنا، ليس في نيويورك فقط بل في كاليفورنيا وتكساس أيضًا. نلتقي تقريبًا مرة في الشهر ونتناول وجبة عائلية تونسية ضخمة! كلنا سعداء هنا.»"]]},
+{f:"🇭🇺",n:"Endre Boros",s:"aged 45, from Hungary",ar:"إندري بوروش · 45 سنة · من هنغاريا",p:[
+["Endre is a mathematician at Rutgers University, New Jersey. He came from Budapest thirteen years ago. “I had an opportunity to come here for two years.” After a year, his wife came to join him, and since then they’ve had a daughter, so they decided to stay.","إندري عالم رياضيات في جامعة روتجرز في نيوجيرسي. جاء من بودابست قبل ثلاث عشرة سنة. «سنحت لي فرصة للمجيء إلى هنا لمدة سنتين.» وبعد سنة جاءت زوجته للانضمام إليه، ومنذ ذلك الحين رُزقا بابنة، فقررا البقاء."],
+["“At first it was very strange. Everything is so big here,” he says. “I started to feel happy when I bought a car. Now I go everywhere by car. In Hungary, we only use the car at weekends, but here your car is part of your life. Nobody walks anywhere.”","يقول: «في البداية كان الأمر غريبًا جدًا. كل شيء هنا كبير جدًا. بدأت أشعر بالسعادة عندما اشتريت سيارة. الآن أذهب إلى كل مكان بالسيارة. في هنغاريا نستخدم السيارة في عطلات نهاية الأسبوع فقط، أما هنا فسيارتك جزء من حياتك. لا أحد يمشي إلى أي مكان.»"],
+["How does he find the people? “Very friendly. The first question everybody asks you is ‘Where are you from?’ People talk to you here, they start conversations. I like the fact that there are people from all over the world.”","كيف يجد الناس؟ «ودودين جدًا. أول سؤال يطرحه عليك الجميع هو: ‹من أين أنت؟› الناس هنا يتحدثون معك ويبدؤون المحادثات. يعجبني أن هناك أناسًا من كل أنحاء العالم.»"],
+["What about the way of life? “The thing I like best is the independence. Nobody tells me what to do. Here you can do what you want, so you learn to make decisions for yourself. I feel in control.”","وماذا عن طريقة العيش؟ «أكثر ما يعجبني هو الاستقلالية. لا أحد يخبرني ماذا أفعل. هنا يمكنك فعل ما تريد، لذلك تتعلم اتخاذ القرارات بنفسك. أشعر أنني متحكم بحياتي.»"]]},
+{f:"🇭🇰",n:"Yuet Tung",s:"aged 31, from Hong Kong",ar:"يويت تونغ · 31 سنة · من هونغ كونغ",p:[
+["Yuet Tung is her Chinese name, but in English she’s known as Clara. She came to the US eight years ago and studied fine art. Now she works on Madison Avenue for a publisher. She married a Vietnamese American three years ago, and they live in Long Island. They don’t have any children yet.","يويت تونغ هو اسمها الصيني، لكنها تُعرف بالإنجليزية باسم كلارا. جاءت إلى أمريكا قبل ثماني سنوات ودرست الفنون الجميلة. تعمل الآن في شارع ماديسون لدى دار نشر. تزوجت قبل ثلاث سنوات من أمريكي من أصل فيتنامي، ويعيشان في لونغ آيلاند. ليس لديهما أطفال بعد."],
+["What does she think of living in New York? “It’s very similar to Hong Kong. It’s a busy city, very exciting, and people walk very fast! I like the stores here. They’re huge, and it’s cheaper than Hong Kong. But you need a car here. In Hong Kong everyone uses public transportation, because it’s good and it’s cheap. At first I hated driving here, but it’s OK now.”","ما رأيها بالعيش في نيويورك؟ «إنها تشبه هونغ كونغ كثيرًا. مدينة مزدحمة ومثيرة جدًا، والناس يمشون بسرعة كبيرة! تعجبني المتاجر هنا. إنها ضخمة والأسعار أرخص من هونغ كونغ. لكنك تحتاج إلى سيارة هنا. في هونغ كونغ يستخدم الجميع المواصلات العامة لأنها جيدة ورخيصة. في البداية كرهت القيادة هنا، لكن الأمر مقبول الآن.»"],
+["What does she like best? “The space. Here I live in a house with a yard. In Hong Kong it is so crowded. And the people are friendly. When I go jogging, everyone says ‘Hi!’ And the food is from every country in the world.”","ما أكثر ما يعجبها؟ «المساحة. هنا أعيش في بيت له حديقة. في هونغ كونغ الازدحام شديد. والناس ودودون. عندما أذهب للركض يقول الجميع: ‹مرحبًا!› والطعام من كل بلدان العالم.»"]]}
+];
+const Q=[
+["Task 1","المهمة 1","Close your eyes and think of the United States. Write down the first five things you think of.","أغمض عينيك وفكّر في الولايات المتحدة. اكتب أول خمسة أشياء تخطر ببالك.",[["Example: The Empire State Building; Cheeseburger and fries.","مثال: مبنى إمباير ستيت؛ تشيز برغر وبطاطا مقلية."],["Compare your list with other students.","قارن قائمتك مع الطلاب الآخرين."]],0],
+["Task 2","المهمة 2","Read the introduction to the magazine article. Then work in three groups.","اقرأ مقدمة مقال المجلة. ثم اعملوا في ثلاث مجموعات.",[["Group A: Read about Aziz.","المجموعة A: اقرأ عن عزيز."],["Group B: Read about Endre.","المجموعة B: اقرأ عن إندري."],["Group C: Read about Yuet Tung.","المجموعة C: اقرأ عن يويت تونغ."]],0],
+["Task 3","المهمة 3","Answer the questions.","أجب عن الأسئلة.",[
+["Why and when did he/she come to the US?","لماذا ومتى جاء/جاءت إلى أمريكا؟",[["Aziz","Ten years ago, to study English.","قبل عشر سنوات ليدرس اللغة الإنجليزية."],["Endre","Thirteen years ago. He had an opportunity to come for two years, then stayed after his daughter was born.","قبل ثلاث عشرة سنة. حصل على فرصة للمجيء لمدة سنتين، ثم بقي بعد ولادة ابنته."],["Yuet Tung","Eight years ago, to study fine art.","قبل ثماني سنوات لتدرس الفنون الجميلة."]]],
+["What does he/she do?","ماذا يعمل/تعمل؟",[["Aziz","He runs a sports store in New Brunswick with his brothers and wife, and drives in the evening.","يدير متجرًا رياضيًا في نيو برونزويك مع إخوته وزوجته، ويعمل سائقًا في المساء."],["Endre","He is a mathematician at Rutgers University.","عالم رياضيات في جامعة روتجرز."],["Yuet Tung","She works for a publisher on Madison Avenue.","تعمل لدى دار نشر في شارع ماديسون."]]],
+["What does he/she like about living in the US?","ماذا يعجبه/يعجبها في العيش في أمريكا؟",[["Aziz","You can be what you want, and his family is here.","يمكنك أن تكون ما تريد، وعائلته هنا."],["Endre","The independence: nobody tells him what to do. He also likes the friendly people from all over the world.","الاستقلالية: لا أحد يخبره ماذا يفعل. ويحب الناس الودودين من كل أنحاء العالم."],["Yuet Tung","The space (a house with a yard), the huge stores, the friendly people and the food from every country.","المساحة (بيت مع حديقة)، والمتاجر الضخمة، والناس الودودون، والطعام من كل بلدان العالم."]]],
+["What was difficult at the beginning?","ما الصعب في البداية؟",[["Aziz","He didn’t speak the language, the winter was very cold, and he missed the sun, the food and his family.","لم يكن يتكلم اللغة، وكان الشتاء باردًا جدًا، واشتاق إلى الشمس والطعام وعائلته."],["Endre","Everything felt strange and too big. He felt happy only after buying a car.","كان كل شيء غريبًا وكبيرًا. ولم يشعر بالسعادة إلا بعد أن اشترى سيارة."],["Yuet Tung","She hated driving, because in Hong Kong everyone uses public transportation.","كرهت القيادة لأن الجميع في هونغ كونغ يستخدمون المواصلات العامة."]]]],1],
+["Task 4","المهمة 4","Find a partner from each of the other two groups. Compare the three people.","ابحث عن شريك من كل مجموعة من المجموعتين الأخريين. قارنوا بين الأشخاص الثلاثة.",[],0],
+["Task 5","المهمة 5","Answer the questions with your group.","أجب عن الأسئلة مع مجموعتك.",[
+["What do the people have in common?","ما القواسم المشتركة بين هؤلاء الأشخاص؟",[["","They are all immigrants near New York who came to study or work. Everything was difficult at first, but now they like living there.","كلهم مهاجرون قرب نيويورك جاؤوا للدراسة أو العمل. كان كل شيء صعبًا في البداية، لكنهم الآن يحبون العيش هناك."]]],
+["Are they all happy living in the US?","هل جميعهم سعداء بالعيش في أمريكا؟",[["","Yes. Aziz says “We’re all happy here”, Endre feels in control, and Yuet Tung likes the space and the people.","نعم. عزيز يقول «كلنا سعداء هنا»، وإندري يشعر أنه متحكم بحياته، ويويت تونغ تحب المساحة والناس."]]],
+["Who has other members of their family living there?","من لديه أفراد آخرون من عائلته يعيشون هناك؟",[["","Aziz: nearly all his family (New York, California, Texas). Endre: his wife and daughter. Yuet Tung: her husband.","عزيز: معظم عائلته (نيويورك وكاليفورنيا وتكساس). إندري: زوجته وابنته. يويت تونغ: زوجها."]]],
+["Do they all have children?","هل لدى جميعهم أطفال؟",[["","No. Aziz has two children and Endre has a daughter, but Yuet Tung has no children yet.","لا. لدى عزيز طفلان ولدى إندري ابنة، أما يويت تونغ فليس لديها أطفال بعد."]]],
+["Who married someone from their own country?","من تزوج شخصًا من بلده؟",[["","Aziz: his wife is also Tunisian. Endre: probably (his wife came to join him). Yuet Tung did not: her husband is Vietnamese American.","عزيز: زوجته تونسية أيضًا. إندري: على الأرجح (زوجته جاءت لتنضم إليه). يويت تونغ لا: زوجها أمريكي من أصل فيتنامي."]]],
+["What do Aziz and Endre like about the US?","ماذا يعجب عزيز وإندري في أمريكا؟",[["","Aziz: you can be what you want, and his family is together there. Endre: the independence and the friendly people from all over the world.","عزيز: يمكنك أن تكون ما تريد، وعائلته مجتمعة هناك. إندري: الاستقلالية والناس الودودون من كل أنحاء العالم."]]],
+["What do they say about their own country?","ماذا يقولون عن بلدهم؟",[["","Aziz missed the sunshine, food and family of Tunisia. In Hungary people only use the car at weekends. In Hong Kong it’s crowded, and public transportation is good and cheap.","عزيز اشتاق إلى شمس تونس وطعامها وعائلته. في هنغاريا يستخدم الناس السيارة في عطلة نهاية الأسبوع فقط. في هونغ كونغ الازدحام شديد والمواصلات العامة جيدة ورخيصة."]]],
+["Do they like the people?","هل يحبون الناس؟",[["","Yes. Endre says they are very friendly and start conversations. Yuet Tung says people are friendly and say “Hi!”.","نعم. إندري يقول إنهم ودودون جدًا ويبدؤون المحادثات. ويويت تونغ تقول إنهم ودودون ويقولون «مرحبًا!»."]]],
+["What do they say about Americans and their cars?","ماذا يقولون عن الأمريكيين وسياراتهم؟",[["","Endre: your car is part of your life, and nobody walks anywhere. Yuet Tung: you need a car; she hated driving at first, but it’s OK now.","إندري: سيارتك جزء من حياتك ولا أحد يمشي. يويت تونغ: تحتاج إلى سيارة؛ كرهت القيادة في البداية لكنها مقبولة الآن."]]]],1],
+["What do you think?","ما رأيك أنت؟","Discuss these questions.","ناقش هذه الأسئلة.",[["What do you like best about living in your country? What would you miss if you lived abroad?","ما أكثر ما يعجبك في العيش في بلدك؟ ماذا ستفتقد لو عشت في الخارج؟",[["Sample answer","What I like best about living in Iraq is my family and the people. We are close to our relatives and we often meet for a big family meal, like Aziz’s family in the text. People are friendly and kind to guests. If I lived abroad, I would miss my family, the food and the warm weather, just like Aziz, who missed the sunshine, the food and his family at first. I would also miss speaking my own language.","أكثر ما يعجبني في العيش في العراق هو عائلتي والناس. نحن قريبون من أقاربنا ونلتقي كثيرًا على وجبة عائلية كبيرة، مثل عائلة عزيز في النص. الناس ودودون ولطيفون مع الضيوف. ولو عشت في الخارج لاشتقت إلى عائلتي والطعام والجو الدافئ، تمامًا مثل عزيز الذي اشتاق في البداية إلى الشمس والطعام وعائلته. وسأشتاق أيضًا إلى التكلم بلغتي."]]],["Do you know any foreigners living in your country? What do they like about it? What do they find different?","هل تعرف أجانب يعيشون في بلدك؟ ماذا يعجبهم فيه؟ ماذا يجدونه مختلفًا؟",[["Sample answer","Yes, there are some foreigners in my country, for example students and workers. I think they like the friendly people and the hospitality, because people here talk to you and start conversations, like Endre says about Americans. They probably find the hot weather, the traffic and the language different. They may also find it strange that families are so close and meet so often.","نعم، هناك بعض الأجانب في بلدي، مثل الطلاب والعاملين. أظن أنهم يحبون الناس الودودين والكرم، لأن الناس هنا يتحدثون معك ويبدؤون المحادثات، كما يقول إندري عن الأمريكيين. وربما يجدون الجو الحار والزحمة واللغة مختلفة. وقد يستغربون أيضًا أن العائلات قريبة جدًا من بعضها وتلتقي كثيرًا."]]]],0]
+];
+const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
+const wrap=t=>t.split(" ").map(w=>`<span class="w" tabindex="0">${w}</span>`).join(" ");
+const blk=(e,a)=>`<div class="blk"><button class="pl" title="استمع">🔊</button><p class="en" dir="ltr">${wrap(e)}</p><p class="ar tr">${a}</p></div>`;
+$("#txt").innerHTML=T.map((x,i)=>`<article class="card"><h2>${x.f} ${x.n}${x.s?` <small>${x.s}</small>`:""}</h2><p class="ar tr"><b>${x.ar}</b></p><button class="all" data-i="${i}">▶ استمع للنص كاملًا</button>${x.p.map(p=>blk(...p)).join("")}</article>`).join("");
+$("#qa").innerHTML=Q.map(([le,la,ie,ia,items,num])=>`<article class="card"><h2>${le} <small>${la}</small></h2>${blk(ie,ia)}${items.map(([q,a,ans],i)=>`<div class="q">${num?`<b class="n">${i+1}</b>`:""}${blk(q,a)}${ans?`<button class="sh">إظهار الإجابة</button><div class="ansbox" hidden>${ans.map(([w,e,r])=>`${w?`<b>${w}</b>`:""}${blk(e,r)}`).join("")}</div>`:""}</div>`).join("")}</article>`).join("");
+let rate=.85,voice,synth=window.speechSynthesis;
+function pick(){const v=synth.getVoices().filter(x=>/^en/i.test(x.lang)),us=v.filter(x=>/en-US/i.test(x.lang));voice=us.find(x=>/Google|Samantha|Aria|Jenny/i.test(x.name))||us[0]||v[0]}
+if(synth){try{pick();synth.onvoiceschanged=pick}catch(e){}}
+function say(t,el){
+if(!synth)return alert("هذا المتصفح لا يدعم النطق الصوتي");
+synth.cancel();$$(".on").forEach(e=>e.classList.remove("on"));
+const parts=[].concat(t);
+parts.forEach((x,i)=>{const u=new SpeechSynthesisUtterance(x);u.lang="en-US";u.rate=rate;if(voice)u.voice=voice;
+if(el){if(!i)el.classList.add("on");if(i==parts.length-1)u.onend=u.onerror=()=>el.classList.remove("on")}synth.speak(u)})}
+document.addEventListener("click",e=>{const t=e.target,w=t.closest(".w");
+if(w){const s=w.textContent.replace(/[^\p{L}’'-]/gu,"");if(s)say(s,w)}
+else if(t.closest(".pl")){const b=t.closest(".blk");say($(".en",b).textContent,b)}
+else if(t.classList.contains("all"))say(T[t.dataset.i].p.map(p=>p[0]),t.closest("article"));
+else if(t.classList.contains("sh")){const b=t.nextElementSibling;b.hidden=!b.hidden;t.textContent=b.hidden?"إظهار الإجابة":"إخفاء الإجابة"}});
+document.addEventListener("keydown",e=>{if(e.key=="Enter"&&e.target.classList.contains("w"))e.target.click()});
+$$(".tab").forEach(b=>b.onclick=()=>{$$(".tab").forEach(x=>x.classList.toggle("act",x==b));$("#txt").hidden=b.dataset.t!="txt";$("#qa").hidden=b.dataset.t!="qa";if(synth)synth.cancel();scrollTo(0,0)});
+$("#rate").onchange=e=>rate=+e.target.value;
+$("#tr").onclick=()=>document.body.classList.toggle("hide");
+$("#all").onclick=()=>{$("#txt").hidden=true;$("#qa").hidden=false;$$(".tab").forEach(x=>x.classList.toggle("act",x.dataset.t=="qa"));const o=$(".ansbox").hidden;$$(".ansbox").forEach(b=>b.hidden=!o);$$(".sh").forEach(b=>b.textContent=o?"إخفاء الإجابة":"إظهار الإجابة")};
+</script></body></html>
